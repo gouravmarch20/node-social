@@ -25,6 +25,9 @@ const user = require('./routes/userRoutes')
 app.use('/api/v1', post)
 app.use('/api/v1', user)
 
+app.get('/hello', (req, res) => {
+    res.status(200).json({ message: 'it deployed' })
+  })
 // app.use(express.static(path.join(__dirname, '../frontend/build')))
 
 // app.get('*', (req, res) => {
